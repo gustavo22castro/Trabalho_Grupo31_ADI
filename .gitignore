@@ -1,0 +1,9 @@
+# Ignorar ficheiros temporários e caches do KNIME
+.metadata/
+.settings/
+node_metadata/
+workflow.knime.lock
+workflow.knime.json.bak
+workflow.knime.md5
+workflow.knime.localsettings.json
+workspace.json
