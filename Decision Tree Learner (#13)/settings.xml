@@ -20,7 +20,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="pruningMethod" type="xstring" value="No pruning"/>
+        <entry key="pruningMethod" type="xstring" value="MDL"/>
         <config key="enableReducedErrorPruning_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -30,7 +30,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="minNumberRecordsPerNode" type="xint" value="2"/>
+        <entry key="minNumberRecordsPerNode" type="xint" value="10"/>
         <config key="numverRecordsToView_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -50,7 +50,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="skipColumnsWithoutDomain" type="xboolean" value="true"/>
+        <entry key="skipColumnsWithoutDomain" type="xboolean" value="false"/>
         <config key="useFirstSplitColumn_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -60,7 +60,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="false"/>
         </config>
-        <entry key="firstSplitColumn" type="xstring" value="date&amp;time diff"/>
+        <entry key="firstSplitColumn" type="xstring" value="hospitalized_days"/>
         <config key="binaryNominalSplit_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -88,34 +88,33 @@
         <entry key="CFG_MISSINGSTRATEGY" type="xstring" value="lastPrediction"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="Execution canceled"/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.base.node.mine.decisiontree2.learner2.DecisionTreeLearnerNodeFactory3"/>
     <entry key="node-name" type="xstring" value="Decision Tree Learner"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-bundle-version" type="xstring" value="5.4.1.v202501291459"/>
+    <entry key="node-bundle-version" type="xstring" value="5.4.1.v202503071316"/>
     <entry key="node-feature-name" type="xstring" value="KNIME Base nodes"/>
     <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-feature-version" type="xstring" value="5.4.1.v202501291459"/>
+    <entry key="node-feature-version" type="xstring" value="5.4.1.v202503071316"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Decision Tree Learner"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObjectSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.core.node.port.pmml.PMMLPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="PMML document with version 4.2 and models: TreeModel"/>
-            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
-            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
-            <entry key="port_dir_location" type="xstring" value="port_1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="8b730a09-2fdf-4f34-8ee2-b1b0367e2df2"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>
